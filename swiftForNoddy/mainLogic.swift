@@ -67,7 +67,7 @@ func mainLogic() {
         let truncatedPitch = Double(Int(normalizedPitch * 100)) / 100
         let truncatedYaw = Double(Int(normalizedYaw * 100)) / 100
 
-        sendMotionData(pitch: truncatedPitch, yaw: truncatedYaw, name: airPodsName, macBattery: MacBattery, airpodLeftBattery: airPodsLeftBattery ?? 0, airpodRightBattery: airPodsRightBattery ?? 0)
+        sendMotionData(pitch: truncatedPitch, yaw: truncatedYaw, name: airPodsName, macBattery: MacBattery, time: elapsedTime ?? "00:00:00")
 
         targetCursorPos = CGPoint(x: mappedX, y: mappedY)
     }
