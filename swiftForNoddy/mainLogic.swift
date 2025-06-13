@@ -101,4 +101,13 @@ func mainLogic() {
     Timer.scheduledTimer(withTimeInterval: 15, repeats: true) { _ in
         MacBattery = fetchMacBatteryLevel() ?? 0
     }
+
+    Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+        let interval = Int(Date().timeIntervalSince(appStartTime))
+        let hours = interval / 3600
+        let minutes = (interval % 3600) / 60
+        let seconds = interval % 60
+        let formatted = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+        elapsedTime = formatted
+    }
 }
