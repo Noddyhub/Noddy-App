@@ -18,6 +18,9 @@ class ToolBarViewController: NSViewController {
     @IBOutlet weak var scrollSensitivitySlider: NSSlider!
     @IBOutlet weak var pauseScrollPopUp: NSPopUpButton!
 
+    // time
+    @IBOutlet weak var executionTimeLabel: NSTextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +41,12 @@ class ToolBarViewController: NSViewController {
         setSlider(scrollSensitivitySlider, min: 50, max: 550, value: scrollSensitivity, ticks: 11, bool: false)
 
         setPopupButton(pauseScrollPopUp, selectedItems: "Q")
+
+        //time
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
+            self.executionTimeLabel.stringValue = elapsedTime ?? "00:00:00"
+        }
     }
 
     // cursor mode

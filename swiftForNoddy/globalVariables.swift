@@ -6,6 +6,10 @@ var airPodsLeftBattery: Int?
 var airPodsRightBattery: Int?
 var MacBattery = 0
 
+// time (Execution Time)
+var appStartTime = Date()
+var elapsedTime: String?
+
 // motionManager.swift (Motion Data)
 var isMotionPaused = false
 var pitchForScroll: CGFloat = 0
