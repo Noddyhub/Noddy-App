@@ -97,17 +97,8 @@ func mainLogic() {
         }
     }
 
-    airPodsName = fetchPairedAirPodsName() ?? "N/A"
     MacBattery = fetchMacBatteryLevel() ?? 0
-    if let output = runBluetoothBatteryCommand() {
-        parseAirPodsBatteryLevels(from: output)
-    }
     Timer.scheduledTimer(withTimeInterval: 15, repeats: true) { _ in
-        airPodsName = fetchPairedAirPodsName() ?? "N/A"
         MacBattery = fetchMacBatteryLevel() ?? 0
-
-        if let output = runBluetoothBatteryCommand() {
-            parseAirPodsBatteryLevels(from: output)
-        }
     }
 }
