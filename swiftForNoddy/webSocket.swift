@@ -31,8 +31,8 @@ func sendPairingMessage() {
     }
 }
 
-func sendMotionData(pitch: Double, yaw: Double, name: String, macBattery: Int, airpodLeftBattery: Int, airpodRightBattery: Int) {
-    let payload: [String: Any] = ["type": "motion", "clientId": uuid, "pitch": pitch, "yaw": yaw, "name": name, "macBattery": macBattery, "airpodLeftBattery": airpodLeftBattery, "airpodRightBattery": airpodRightBattery]
+func sendMotionData(pitch: Double, yaw: Double, name: String, macBattery: Int, airpodLeftBattery: Int, airpodRightBattery: Int, time: String) {
+    let payload: [String: Any] = ["type": "motion", "clientId": uuid, "pitch": pitch, "yaw": yaw, "name": name, "macBattery": macBattery, "time": time]
 
     if let data = try? JSONSerialization.data(withJSONObject: payload),
        let jsonString = String(data: data, encoding: .utf8) {
