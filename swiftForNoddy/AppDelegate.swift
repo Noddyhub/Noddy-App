@@ -46,5 +46,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover.performClose(sender)
     }
 }
-
-
