@@ -4,6 +4,11 @@
 
 ## User settings
 xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcodeproj/project.xcworkspace/xcuserdata
+*.moved-aside
+*.xcscmblueprint
 
 ## Obj-C/Swift specific
 *.hmap
@@ -60,3 +65,33 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Build
+build/
+DerivedData/
+*.ipa
+*.app
+*.dSYM
+*.dSYM.zip
+*.xcarchive
+
+# Swift Package Manager
+.swiftpm/
+.build/
+Package.resolved
+
+# CocoaPods
+Pods/
+
+# Playground
+timeline.xctimeline
+playground.xcworkspace
+
+# User settings
+*.swp
+*.lock
+*.DS_Store
+.idea/
+*.xcuserdata/
+*.xcuserstate
+*.orig
